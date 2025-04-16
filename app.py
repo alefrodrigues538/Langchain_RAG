@@ -23,6 +23,6 @@ if prompt := st.chat_input("Digite sua pergunta aqui..."):
     # Exibe o spinner enquanto processa a resposta
     with st.chat_message("assistant"):
         with st.spinner("Gerando resposta..."):
-            response = st.session_state.chain.invoke({"input": prompt})["output"]
+            response = st.session_state.chain.run(prompt)
             st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
