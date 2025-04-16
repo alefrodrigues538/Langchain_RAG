@@ -1,0 +1,6 @@
+langchain
+langchain-cohere
+langchain-community
+chromadb
+python-dotenv
+streamlit
